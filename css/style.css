@@ -4,26 +4,26 @@
 3282b8 5f85db
 bbe1fa 90b8f8
 */
-@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Lora:700|Oxygen|Roboto+Slab:300&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Lora:700|Oxygen|Roboto+Slab:300&display=swap");
 body {
     background-color: #26282b;
     color: #fff;
 }
 
-h1{
-    font-family: 'Archivo Black', sans-serif;
+h1 {
+    font-family: "Archivo Black", sans-serif;
 }
 
-h3{
-    font-family: 'Lato', serif;
+h3 {
+    font-family: "Lato", serif;
 }
 
-h5{
-    font-family: 'Oxygen', sans-serif;
+h5 {
+    font-family: "Oxygen", sans-serif;
 }
 
-P{
-    font-family: 'Roboto Slab', serif;
+P {
+    font-family: "Roboto Slab", serif;
 }
 #welcome-section {
     /* background-color: black; */
@@ -64,12 +64,12 @@ nav {
     font-size: 6rem;
 }
 
-#about>p {
+#about > p {
     padding-top: 2rem;
 }
 
 #contact .fab,
-.fas{
+.fas {
     font-size: 3rem;
 }
 
@@ -78,7 +78,7 @@ nav {
     color: #fff;
 }
 
-#contact>hr {
+#contact > hr {
     width: 85%;
     background: #fff;
 }
@@ -86,9 +86,9 @@ nav {
 .fa-github,
 .fa-instagram,
 .fa-twitter,
-.fa-free-code-camp, 
+.fa-free-code-camp,
 .fa-linkedin-in,
-.fa-at{
+.fa-at {
     color: #aaa;
 }
 
@@ -101,7 +101,7 @@ nav {
 }
 
 .fa-bootstrap {
-    color: #7952B3;
+    color: #7952b3;
 }
 
 .fa-js-square {
@@ -109,7 +109,7 @@ nav {
 }
 
 .fa-git-alt {
-    color: #F05033;
+    color: #f05033;
 }
 
 hr {
@@ -125,7 +125,7 @@ h5 {
     color: #bbb;
 }
 
-.tool-caption > p{
+.tool-caption > p {
     display: block;
     /* height: 450px;
     width: 450px; */
@@ -136,21 +136,47 @@ h5 {
     padding-right: 4rem;
 }
 
-.tool-caption > h5{
+.tool-caption > h5 {
     padding: 1rem;
 }
 .no-gutters {
     margin-right: 0;
     margin-left: 0;
-  
 }
 
-.no-gutters> .col,
-.no-gutters> [class*="col-"] {
-  padding-right: 0;
-  padding-left: 0;
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
 }
-@media screen and (max-width: 576px) {
+
+/* project cards */
+.project-cards {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cards {
+    flex: 0 0 1;
+    /* background-color: #fff; */
+    border: 1px solid #fff;
+    border-radius: 15px;
+    margin: 2% 4%;
+    width: 20%;
+    height: max-content;
+    padding: 1em;
+}
+.project-links {
+    display: flex;
+    justify-content: space-evenly;
+}
+.project-links a {
+    color: #aaa;
+}
+@media screen and (max-width: 760px) {
     #welcome-section {
         height: 100vh;
         grid-template-columns: none;
@@ -158,16 +184,17 @@ h5 {
         grid-template-areas: "info" "pic";
     }
 
-    #intro{
+    #intro {
         text-align: center;
     }
 
-    .carousel-control-prev,.carousel-control-next{
+    .carousel-control-prev,
+    .carousel-control-next {
         position: absolute;
         bottom: -13rem;
     }
 
-    .padding{
+    .padding {
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
