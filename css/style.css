@@ -70,7 +70,7 @@ nav {
 
 #contact .fab,
 .fas {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 #contact {
@@ -173,8 +173,22 @@ h5 {
     display: flex;
     justify-content: space-evenly;
 }
-.project-links a {
+.project-links a,
+a {
     color: #aaa;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1em;
+    flex-wrap: wrap;
+}
+
+/* hero image */
+#dp {
+    width: 20em;
 }
 @media screen and (max-width: 760px) {
     #welcome-section {
@@ -197,5 +211,11 @@ h5 {
     .padding {
         padding-top: 1rem;
         padding-bottom: 1rem;
+    }
+    .cards {
+        flex-direction: column;
+        width: 90%;
+        margin: 5% 0;
+        align-items: center;
     }
 }
