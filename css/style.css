@@ -185,7 +185,14 @@ a {
     padding: 1em;
     flex-wrap: wrap;
 }
-
+.stack {
+    background-color: #ccc;
+    width: max-content;
+    padding: 0.2em 0.8em;
+    border-radius: 15px;
+    color: #000;
+    font-weight: bold;
+}
 /* hero image */
 #dp {
     width: 20em;
