@@ -6,25 +6,15 @@ bbe1fa 90b8f8
 */
 @import url("https://fonts.googleapis.com/css?family=Archivo+Black|Lora:700|Oxygen|Roboto+Slab:300&display=swap");
 body {
-    background-color: #26282b;
+    background-color: hsl(216, 6%, 16%);
     color: #fff;
+    font-family: "Roboto Slab", serif;
 }
 
 h1 {
     font-family: "Archivo Black", sans-serif;
 }
 
-h3 {
-    font-family: "Lato", serif;
-}
-
-h5 {
-    font-family: "Oxygen", sans-serif;
-}
-
-P {
-    font-family: "Roboto Slab", serif;
-}
 #welcome-section {
     background-image: url("https://miro.medium.com/max/2400/1*ee9Ji2ToUxeYfj3YUQ1xsA.jpeg");
     display: flex;
@@ -33,11 +23,6 @@ P {
     justify-content: space-evenly;
     height: 100vh;
     align-items: center;
-}
-
-#dp {
-    border-radius: 50%;
-    width: 20em;
 }
 
 nav {
@@ -53,8 +38,26 @@ nav {
     font-size: 6rem;
 }
 
-#about > p {
-    padding-top: 2rem;
+/* About section */
+.about {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0 10%;
+}
+
+.dp {
+    border-radius: 50%;
+    width: 8em;
+}
+
+.lead {
+    padding: 0 1em;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
 }
 
 #contact .fab,
@@ -63,52 +66,31 @@ nav {
 }
 
 #contact {
-    background: #353941;
     color: #fff;
 }
 
 #contact > hr {
     width: 85%;
     background: #fff;
+    height: 0.5px;
+    border: none;
+    opacity: 0.5;
 }
-
+.topic {
+    padding-bottom: 1em;
+}
 .fa-github,
 .fa-instagram,
 .fa-twitter,
 .fa-free-code-camp,
 .fa-linkedin-in,
 .fa-at {
-    color: #aaa;
-}
-
-.fa-html5 {
-    color: #e54d26;
-}
-
-.fa-css3 {
-    color: #2163af;
-}
-
-.fa-bootstrap {
-    color: #7952b3;
-}
-
-.fa-js-square {
-    color: #f7df1d;
-}
-
-.fa-git-alt {
-    color: #f05033;
+    color: #eee;
 }
 
 hr {
     background: #aaa;
     width: 75%;
-}
-
-.lead {
-    margin: 0 10%;
-    padding: 2rem;
 }
 
 h5 {
@@ -146,6 +128,7 @@ h5 {
     border-radius: 15px;
     margin: 2% 4%;
     width: 20%;
+    height: 30vh;
     height: max-content;
     padding: 1em;
 }
@@ -180,8 +163,9 @@ a {
     #welcome-section {
         flex-direction: column;
     }
-    #intro {
-        padding: 2em;
+    #intro h1 {
+        font-size: 32px;
+        white-space: nowrap;
     }
     #dp {
         width: 16em;
