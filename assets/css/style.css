@@ -10,7 +10,7 @@ body {
 h1 {
     font-family: "Archivo Black", sans-serif;
 }
-
+/* welcome section */
 #welcome-section {
     background-color: #000;
     background-size: cover;
@@ -20,6 +20,11 @@ h1 {
     justify-content: space-evenly;
     height: 100vh;
     align-items: center;
+}
+.welcome-section-hr {
+    background-color: #fff;
+    border: none;
+    height: 0.1px;
 }
 .navbar.navbar-expand-lg.navbar-dark.bg-dark {
     background-color: #000 !important;
@@ -32,23 +37,25 @@ h1 {
 .fab {
     font-size: 6rem;
 }
-
+#projects .lead,
+#blogs .lead {
+    margin-left: 10%;
+    padding-left: 2em;
+}
 /* About section */
 .about {
     display: flex;
     flex-direction: row;
-
+    justify-content: center;
     margin: 0 10%;
 }
-
+.about .lead {
+    width: 80%;
+}
 .dp {
     border-radius: 50%;
     padding: 1em 0;
     width: 8em;
-}
-
-.lead {
-    padding: 0 1em;
 }
 
 #intro {
@@ -66,13 +73,6 @@ h1 {
     color: #ccc;
 }
 
-#contact > hr {
-    width: 85%;
-    background: #000;
-    height: 0.5px;
-    border: none;
-    opacity: 0.5;
-}
 .topic {
     padding: 1em 0;
 }
@@ -83,15 +83,6 @@ h1 {
 .fa-linkedin-in,
 .fa-at {
     color: #eee;
-}
-
-hr {
-    background: #000;
-    width: 75%;
-}
-
-h5 {
-    color: #000;
 }
 
 .tool-caption > p {
@@ -113,6 +104,7 @@ h5 {
 #projects {
     background-color: #000;
     color: #ccc;
+    padding: 1em 0;
 }
 .project-cards,
 .blog-cards {
@@ -186,9 +178,13 @@ footer .fab {
         flex-direction: column;
         background-size: auto;
     }
+    #intro {
+        padding: 0 1em;
+    }
     #intro h1 {
-        font-size: 32px;
+        font-size: 28px;
         white-space: nowrap;
+        width: 90%;
     }
     #dp {
         width: 16em;
@@ -196,6 +192,11 @@ footer .fab {
     .about {
         flex-direction: column;
         align-items: center;
+    }
+
+    .about .lead {
+        width: 90%;
+        padding: 0;
     }
     .dp {
         padding: 1em;
@@ -216,7 +217,10 @@ footer .fab {
         margin: 5% 0;
         align-items: center;
     }
-    .lead {
-        margin: 0;
+
+    #projects .lead,
+    #blogs .lead {
+        margin-left: 0;
+        padding: 0 1em;
     }
 }
