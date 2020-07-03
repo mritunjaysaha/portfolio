@@ -10,8 +10,6 @@ bbe1fa 90b8f8
     box-sizing: border-box;
 }
 body {
-    /* background-color: hsl(216, 6%, 16%); */
-    background-color: #fff;
     font-family: "Roboto Slab", serif;
 }
 
@@ -62,7 +60,7 @@ h1 {
 #intro {
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: #ccc;
 }
 
 #contact .fab,
@@ -71,7 +69,7 @@ h1 {
 }
 
 #contact {
-    color: #fff;
+    color: #ccc;
 }
 
 #contact > hr {
@@ -120,7 +118,7 @@ h5 {
 /* project cards */
 #projects {
     background-color: #000;
-    color: #fff;
+    color: #ccc;
 }
 .project-cards,
 .blog-cards {
@@ -181,9 +179,12 @@ a {
 
 footer {
     background-color: #000;
-    color: #fff;
+    color: #aaa;
     text-align: center;
     padding: 1em 0;
+}
+footer .fab {
+    font-size: 1em;
 }
 @media screen and (max-width: 760px) {
     #welcome-section {
