@@ -145,7 +145,7 @@ a {
     font-weight: bold;
 }
 .project-links-review {
-    color: orangered !important;
+    color: #cc6124 !important;
 }
 
 .reviewed-projects {
@@ -154,7 +154,7 @@ a {
     justify-content: space-evenly;
 }
 .reviewed-projects .cards {
-    border: 4px solid orangered;
+    border: 4px solid #cc6124;
 }
 .contact-links {
     display: flex;
