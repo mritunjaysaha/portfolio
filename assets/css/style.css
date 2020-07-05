@@ -5,6 +5,7 @@
 }
 body {
     font-family: "Roboto Slab", serif;
+    background-color: #edf2f7;
 }
 
 h1 {
@@ -12,7 +13,7 @@ h1 {
 }
 /* welcome section */
 #welcome-section {
-    background-color: #000;
+    background-color: #16161d;
     background-size: cover;
     display: flex;
     flex-direction: row;
@@ -22,12 +23,12 @@ h1 {
     align-items: center;
 }
 .welcome-section-hr {
-    background-color: #fff;
+    background-color: #edf2f7;
     border: none;
     height: 0.1px;
 }
 .navbar.navbar-expand-lg.navbar-dark.bg-dark {
-    background-color: #000 !important;
+    background-color: #16161d !important;
 }
 .padding {
     padding-top: 2rem;
@@ -61,7 +62,7 @@ h1 {
 #intro {
     display: flex;
     flex-direction: column;
-    color: #ccc;
+    color: #bbb;
 }
 
 #contact .fab,
@@ -70,19 +71,15 @@ h1 {
 }
 
 #contact {
-    color: #ccc;
+    color: #edf2f7;
 }
 
 .topic {
     padding: 1em 0;
 }
-.fa-github,
-.fa-instagram,
-.fa-twitter,
-.fa-free-code-camp,
-.fa-linkedin-in,
-.fa-at {
-    color: #eee;
+.fab,
+.fa {
+    color: #aaa;
 }
 
 .tool-caption > p {
@@ -102,8 +99,8 @@ h1 {
 
 /* project cards */
 #projects {
-    background-color: #000;
-    color: #ccc;
+    background-color: #16161d;
+    color: #bbb;
     padding: 1em 0;
 }
 .project-cards,
@@ -117,8 +114,8 @@ h1 {
 
 .cards {
     flex: 0 0 1;
-    /* background-color: #fff; */
-    border: 1px solid #fff;
+    /* background-color: #EDF2F7; */
+    border: 1px solid #edf2f7;
     border-radius: 15px;
     margin: 2% 4%;
     width: 20%;
@@ -128,7 +125,7 @@ h1 {
 }
 
 .blog-cards .cards {
-    border: 1px solid #000;
+    border: 1px solid #16161d;
 }
 
 .project-links,
@@ -141,7 +138,7 @@ a {
     color: #aaa;
 }
 .blog-links a {
-    color: #000;
+    color: #16161d;
     font-weight: bold;
 }
 .project-links-review {
@@ -164,16 +161,16 @@ a {
     flex-wrap: wrap;
 }
 .stack {
-    background-color: #ccc;
+    background-color: #999;
     width: max-content;
     padding: 0.2em 0.8em;
     border-radius: 15px;
-    color: #000;
+    color: #16161d;
     font-weight: bold;
 }
 
 footer {
-    background-color: #000;
+    background-color: #16161d;
     color: #aaa;
     text-align: center;
     padding: 1em 0;
