@@ -145,7 +145,16 @@ a {
     font-weight: bold;
 }
 .project-links-review {
-    text-shadow: 1px 0 10px #eee;
+    color: orangered !important;
+}
+
+.reviewed-projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.reviewed-projects .cards {
+    border: 4px solid orangered;
 }
 .contact-links {
     display: flex;
@@ -217,7 +226,11 @@ footer .fab {
         margin: 5% 0;
         align-items: center;
     }
-
+    .reviewed-projects {
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 0;
+    }
     #projects .lead,
     #blogs .lead {
         margin-left: 0;
