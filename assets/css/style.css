@@ -8,9 +8,40 @@ body {
     background-color: #edf2f7;
 }
 
-h1 {
+h2 {
     font-family: "Archivo Black", sans-serif;
 }
+/* Typewritter animation */
+.typewriter h1 {
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
 /* welcome section */
 #welcome-section {
     background-color: #16161d;
@@ -180,6 +211,19 @@ footer .fab {
     font-size: 1em;
 }
 @media screen and (max-width: 760px) {
+    .typewriter h1 {
+        font-size: 18px;
+        letter-spacing: 0.05em;
+        margin: 0;
+    }
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 80%;
+        }
+    }
     #welcome-section {
         flex-direction: column;
         background-size: auto;
