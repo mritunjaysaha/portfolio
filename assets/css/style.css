@@ -173,7 +173,7 @@ a {
     font-weight: bold;
 }
 .project-links-review {
-    color: #cc6124 !important;
+    /* color: #cc6124 !important; */
 }
 
 .reviewed-projects {
@@ -182,7 +182,7 @@ a {
     justify-content: space-evenly;
 }
 .reviewed-projects .cards {
-    border: 4px solid #cc6124;
+    /* border: 4px solid #cc6124; */
 }
 .contact-links {
     display: flex;
