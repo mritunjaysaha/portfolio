@@ -55,3 +55,28 @@ export const projects = [
         stack: ["React.js", "Material-UI", "React-reveal", "Sass"],
     },
 ];
+
+export const blogs = [
+    {
+        id: 1,
+        name: "Theme switching using localStorage",
+        description: "Saving the state of the theme after switching.",
+        link:
+            "https://dev.to/mritunjaysaha/theme-switching-using-local-storage-13i",
+    },
+    {
+        id: 2,
+        name: "How to create a piconet in Java?",
+        description: "Connect multiple bluetooth devices to a single device.",
+        link:
+            "https://dev.to/mritunjaysaha/how-to-create-piconet-in-android-4236",
+    },
+    {
+        id: 3,
+        name: "Using idb-keyval for IndexedDB",
+        description:
+            "IndexedDB is a great alternate option in place of localStorage.",
+        link:
+            "https://dev.to/mritunjaysaha/using-idb-keyval-for-indexeddb-22d2",
+    },
+];
