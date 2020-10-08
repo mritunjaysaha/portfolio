@@ -1,0 +1,12 @@
+@import "./abstract/variable";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0 $desktop-padding-lr;
+}
