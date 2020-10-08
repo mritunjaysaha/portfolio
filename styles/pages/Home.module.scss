@@ -1,20 +1,22 @@
+@import "../abstract/variable";
 .navbar {
     display: flex;
     justify-content: space-between;
+    padding: 4rem $desktop-padding-lr;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
 
     .logo {
-        font-size: 1em;
         font-weight: bold;
     }
 
     .links {
-        width: 20vw;
         display: flex;
         justify-content: space-between;
 
         & > a {
             color: #f00;
             text-decoration: none;
+            padding: 0 2rem;
         }
     }
 }
