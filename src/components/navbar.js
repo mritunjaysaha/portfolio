@@ -1,24 +1,48 @@
 import React from "react";
 import Link from "next/link";
-import styles from "../../styles/pages/Home.module.scss";
+/**@jsx jsx */
+import { css, jsx } from "@emotion/core";
+import { AnchorTag } from "../components/utils/utils";
 
 export function Navbar() {
     return (
-        <nav className={styles.navbar}>
-            <div className={styles.logo}>
-                <p>@Mritunjay_Saha_</p>
+        <nav
+            css={css`
+                grid-column: 1 / span 12;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 4rem;
+            `}
+        >
+            <div>
+                <Link href="#">
+                    <AnchorTag>@Mritunjay_Saha_</AnchorTag>
+                </Link>
             </div>
-            <div className={styles.links}>
+            <div
+                css={css`
+                    display: flex;
+                    & > a {
+                        padding: 0 1rem;
+                        &:first-child {
+                            padding-left: 0;
+                        }
+                        &:last-child {
+                            padding-right: 0;
+                        }
+                    }
+                `}
+            >
                 <Link href="/projects">
-                    <a>Projects</a>
+                    <AnchorTag>Projects</AnchorTag>
                 </Link>
                 <Link href="/blogs">
-                    <a>Blogs</a>
+                    <AnchorTag>Blogs</AnchorTag>
                 </Link>
                 <Link href="/about">
-                    <a>About</a>
+                    <AnchorTag>About</AnchorTag>
                 </Link>
-                <a href="">Contacts</a>
+                <AnchorTag>Contacts</AnchorTag>
             </div>
         </nav>
     );
