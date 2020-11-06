@@ -39,9 +39,8 @@ export const projects = [
         id: 5,
         name: "Rock Paper Scissors",
         description: "A rock-paper-scissor game made using VanillaJS.",
-        repo:
-            "https://github.com/mritunjaysaha/rest-countries-api-with-color-switching",
-        demo: "https://rest-countries-api-with-color-switching.vercel.app/",
+        repo: "rock-paper-scissor-wheat.vercel.app",
+        demo: "",
         stack: ["JavaScript", "HTML", "CSS"],
     },
     {
