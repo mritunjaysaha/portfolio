@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 /**@jsx jsx */
 import { css, jsx } from "@emotion/core";
-import { AnchorTag } from "../components/utils/utils";
+import { Anchor } from "../atoms/anchor";
 
 export function Navbar() {
     return (
@@ -15,9 +15,10 @@ export function Navbar() {
             `}
         >
             <div>
-                <Link href="#">
-                    <AnchorTag>@Mritunjay_Saha_</AnchorTag>
-                </Link>
+                <Anchor
+                    content="@MritunjaySaha_"
+                    link="https://twitter.com/MritunjaySaha_"
+                />
             </div>
             <div
                 css={css`
@@ -33,16 +34,10 @@ export function Navbar() {
                     }
                 `}
             >
-                <Link href="/projects">
-                    <AnchorTag>Projects</AnchorTag>
-                </Link>
-                <Link href="/blogs">
-                    <AnchorTag>Blogs</AnchorTag>
-                </Link>
-                <Link href="/about">
-                    <AnchorTag>About</AnchorTag>
-                </Link>
-                <AnchorTag>Contacts</AnchorTag>
+                <Anchor content="Projects" link="/projects" />
+                <Anchor content="Blogs" link="/blogs" />
+                <Anchor content="About" link="/about" />
+                <Anchor content="Contacts" />
             </div>
         </nav>
     );
