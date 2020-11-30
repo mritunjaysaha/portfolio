@@ -8,6 +8,8 @@ export function Anchor(props) {
             <a
                 css={css`
                     color: ${props.color || "#000"};
+                    font-weight: ${props.fontWeight || "normal"};
+                    cursor: pointer;
                 `}
             >
                 {props.content}

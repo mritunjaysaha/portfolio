@@ -1,4 +1,3 @@
-import React from "react";
 /**@jsx jsx */
 import { css, jsx } from "@emotion/core";
 import { UilLinkedin, UilGithub, UilTwitter } from "@iconscout/react-unicons";

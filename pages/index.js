@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React from "react";
 import { Navbar } from "../src/components/navbar";
 import { SocialTabs } from "../src/components/socialTabs";
