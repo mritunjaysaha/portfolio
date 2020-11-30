@@ -10,10 +10,16 @@ export function Navbar() {
                 grid-column: 1 / span 12;
                 display: flex;
                 justify-content: space-between;
-                padding-top: 4rem;
+                padding: 4rem 0;
             `}
         >
-            <div>
+            <div
+                css={css`
+                    & > a {
+                        padding: 0.5rem 1rem;
+                    }
+                `}
+            >
                 <Anchor
                     content="@MritunjaySaha_"
                     link="https://twitter.com/MritunjaySaha_"
@@ -23,15 +29,16 @@ export function Navbar() {
             <div
                 css={css`
                     display: flex;
+                    justify-content: space-between;
+                    width: 30rem;
+
                     & > a {
-                        padding: 0 1rem;
-                        &:first-of-type {
-                            padding-left: 0;
-                            padding-right: 4rem;
-                        }
-                        &:last-of-type {
-                            padding-left: 4rem;
-                            padding-right: 0;
+                        padding: 0.5rem 1rem;
+                        transition: background 0.4s;
+                        border-radius: 6px;
+
+                        &:hover {
+                            background: #f00;
                         }
                     }
                 `}
