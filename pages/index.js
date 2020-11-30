@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar } from "../src/components/navbar";
 import { SocialTabs } from "../src/components/socialTabs";
 import { Footer } from "../src/components/footer";
-
+import { ImageSlider } from "../src/components/imageSlider";
 /**@jsx jsx */
 import { css, jsx } from "@emotion/core";
 
@@ -22,6 +22,8 @@ export default function Home() {
                     css={css`
                         padding: 20rem 0;
                         grid-column: 1 / span 12;
+                        display: flex;
+                        justify-content: space-between;
                     `}
                 >
                     <header>
@@ -50,6 +52,7 @@ export default function Home() {
                             <br />3<sup>rd</sup> year CSE at NERIST
                         </p>
                     </header>
+                    <ImageSlider />
                 </section>
                 <section
                     css={css`
