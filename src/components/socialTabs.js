@@ -7,6 +7,15 @@ import { Anchor } from "../atoms/anchor";
 const socialIcons = css`
     height: 3rem;
     width: 3rem;
+    padding: 1rem;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border 0.8s;
+    transition-delay: 0.4s;
+
+    &:hover {
+        border: 2px solid #f00;
+    }
 `;
 
 const asideStyle = css`

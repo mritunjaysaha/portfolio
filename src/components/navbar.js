@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 /**@jsx jsx */
 import { css, jsx } from "@emotion/core";
 import { Anchor } from "../atoms/anchor";
@@ -25,10 +24,10 @@ export function Navbar() {
                     display: flex;
                     & > a {
                         padding: 0 1rem;
-                        &:first-child {
+                        &:first-of-type {
                             padding-left: 0;
                         }
-                        &:last-child {
+                        &:last-of-type {
                             padding-right: 0;
                         }
                     }
