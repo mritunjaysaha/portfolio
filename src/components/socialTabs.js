@@ -10,7 +10,6 @@ const socialIcons = css`
     border-radius: 50%;
     border: 2px solid transparent;
     transition: border 0.8s;
-    transition-delay: 0.4s;
 
     &:hover {
         border: 2px solid #f00;
