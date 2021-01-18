@@ -41,9 +41,6 @@ const ProjectDetails = (props) => {
                 >
                     <p>{project.description}</p>
                     <p>
-                        <strong>GitHub:&nbsp;</strong> {project.repo}
-                    </p>
-                    <p>
                         <strong>Stack:&nbsp;</strong>
                         <Stacks stacks={project.stack} />
                     </p>
@@ -58,6 +55,9 @@ const ProjectDetails = (props) => {
                         >
                             {project.demo}
                         </a>
+                    </p>
+                    <p>
+                        <strong>GitHub:&nbsp;</strong> {project.repo}
                     </p>
                 </section>
                 <br />
