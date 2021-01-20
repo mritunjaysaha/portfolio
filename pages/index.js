@@ -70,6 +70,35 @@ export default function Home() {
             >
                 <Navbar />
                 <IntroSection />
+                {/* Project Section */}
+                <section
+                    css={css`
+                        grid-column: 1 / span 12;
+                    `}
+                >
+                    <article>
+                        <div></div>
+                        <div>
+                            <h1>Project Name</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Mollitia architecto ab dolorem
+                                accusamus illo repellendus non officiis ratione
+                                omnis reprehenderit?
+                            </p>
+                            <p>
+                                Stack:{" "}
+                                <span>
+                                    <p>react</p>
+                                </span>
+                            </p>
+                            <div>
+                                <a href="">GitHub</a>
+                                <a href="">View</a>
+                            </div>
+                        </div>
+                    </article>
+                </section>
                 <FooterSection />
             </section>
             <SocialTabs />
