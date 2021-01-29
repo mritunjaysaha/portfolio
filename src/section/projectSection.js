@@ -1,7 +1,6 @@
 /**@jsx jsx */
 import { css, jsx } from "@emotion/core";
 import { projects } from "../data/projectInfo";
-import { Anchor } from "../atoms/anchor";
 import { ProjectArticle } from "../components/projectArticle";
 
 export function ProjectSection() {
