@@ -23,8 +23,7 @@ export function IntroSection() {
                     Hey, I'm{" "}
                     <span
                         css={css`
-                            color: ${style.color.textColorGreen};
-                            opacity: 0.8;
+                            color: ${style.color.textColor};
                             text-decoration: underline;
                         `}
                     >
