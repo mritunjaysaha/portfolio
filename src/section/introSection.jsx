@@ -1,6 +1,7 @@
 /**@jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { ImageSlider } from "../components/imageSlider";
+import { style } from "../../styles/style";
 
 export function IntroSection() {
     return (
@@ -22,7 +23,8 @@ export function IntroSection() {
                     Hey, I'm{" "}
                     <span
                         css={css`
-                            opacity: 0.7;
+                            color: ${style.color.textColorGreen};
+                            opacity: 0.8;
                             text-decoration: underline;
                         `}
                     >
