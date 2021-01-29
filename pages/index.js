@@ -1,10 +1,12 @@
+/**@jsx jsx */
+import { css, jsx } from "@emotion/core";
+
 import React from "react";
 import { Navbar } from "../src/components/navbar";
 import { SocialTabs } from "../src/components/socialTabs";
 import { Footer } from "../src/components/footer";
 import { ImageSlider } from "../src/components/imageSlider";
-/**@jsx jsx */
-import { css, jsx } from "@emotion/core";
+import { ProjectSection } from "../src/section/projectSection";
 
 export default function Home() {
     const IntroSection = () => (
@@ -70,35 +72,7 @@ export default function Home() {
             >
                 <Navbar />
                 <IntroSection />
-                {/* Project Section */}
-                <section
-                    css={css`
-                        grid-column: 1 / span 12;
-                    `}
-                >
-                    <article>
-                        <div></div>
-                        <div>
-                            <h1>Project Name</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Mollitia architecto ab dolorem
-                                accusamus illo repellendus non officiis ratione
-                                omnis reprehenderit?
-                            </p>
-                            <p>
-                                Stack:{" "}
-                                <span>
-                                    <p>react</p>
-                                </span>
-                            </p>
-                            <div>
-                                <a href="">GitHub</a>
-                                <a href="">View</a>
-                            </div>
-                        </div>
-                    </article>
-                </section>
+                <ProjectSection />
                 <FooterSection />
             </section>
             <SocialTabs />
