@@ -10,7 +10,7 @@ export function ProjectArticle({ name, description, repo, demo, stack }) {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
                     grid-template-areas: "img content content";
-                    margin-top: 4rem;
+                    margin: 8rem 0;
                 `}
             >
                 <ProjectCard

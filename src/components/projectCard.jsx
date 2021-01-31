@@ -2,6 +2,7 @@
 import { css, jsx } from "@emotion/core";
 import { Anchor } from "../atoms/anchor";
 import { style } from "../../styles/style";
+import Image from "next/image";
 
 export function ProjectCard({ name, description, repo, demo, stack }) {
     const temp =
@@ -32,12 +33,18 @@ export function ProjectCard({ name, description, repo, demo, stack }) {
                 >
                     {name ? name : "Project Name"}
                 </h1>
-                <p>{description ? description : temp}</p>
+                <p
+                    css={css`
+                        margin: 1rem 0;
+                    `}
+                >
+                    {description ? description : temp}
+                </p>
                 <p
                     css={css`
                         display: flex;
                         align-items: center;
-                        margin-bottom: 1rem;
+                        margin-bottom: 1.5rem;
                     `}
                 >
                     <strong>Stack:</strong>
@@ -70,7 +77,7 @@ export function ProjectCard({ name, description, repo, demo, stack }) {
                         display: flex;
                         a {
                             text-decoration: none;
-                            margin-right: 2rem;
+                            margin: 0 1rem;
                             padding: 1rem 2rem;
                             border: 1px solid ${style.color.blueBorder};
                             border-radius: 0.5rem;
