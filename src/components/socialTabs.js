@@ -2,6 +2,7 @@
 import { css, jsx } from "@emotion/core";
 import { UilLinkedin, UilGithub, UilTwitter } from "@iconscout/react-unicons";
 import { Anchor } from "../atoms/anchor";
+import { style } from "../../styles/style";
 
 const socialIcons = css`
     height: 3rem;
@@ -12,7 +13,7 @@ const socialIcons = css`
     transition: border 0.8s;
 
     &:hover {
-        border: 2px solid #f00;
+        border: 2px solid ${style.color.blueBorder};
     }
 `;
 
