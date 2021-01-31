@@ -1,6 +1,7 @@
 /**@jsx jsx*/
 import { css, jsx } from "@emotion/core";
 import { Anchor } from "../atoms/anchor";
+import { style } from "../../styles/style";
 
 export function ProjectCard({ name, description, repo, demo, stack }) {
     const temp =
@@ -36,6 +37,7 @@ export function ProjectCard({ name, description, repo, demo, stack }) {
                     css={css`
                         display: flex;
                         align-items: center;
+                        margin-bottom: 1rem;
                     `}
                 >
                     <strong>Stack:</strong>
@@ -44,8 +46,9 @@ export function ProjectCard({ name, description, repo, demo, stack }) {
                             display: flex;
                             margin-left: 1rem;
                             p {
-                                background-color: #f00;
-                                padding: 0.5rem 1.5rem;
+                                background-color: ${style.color.blue};
+                                border: 1px solid ${style.color.blueBorder};
+                                padding: 1rem 2rem;
                                 margin: 0 1rem;
                                 border-radius: 0.5rem;
                             }
@@ -68,23 +71,16 @@ export function ProjectCard({ name, description, repo, demo, stack }) {
                         a {
                             text-decoration: none;
                             margin-right: 2rem;
-                            padding: 0.5rem 1.5rem;
-                            border: 2px solid #f00;
+                            padding: 1rem 2rem;
+                            border: 1px solid ${style.color.blueBorder};
                             border-radius: 0.5rem;
-                            &:nth-last-child() {
+
+                            &:last-child {
                                 margin-right: 0;
                             }
                         }
                     `}
                 >
-                    {/* <a
-                        target="_blank"
-                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column"
-                    >
-                        GitHub
-                    </a>
-                    <a href="">View</a> */}
-
                     <Anchor content="Github" link={repo} />
                     <Anchor content="Visit" link={demo} />
                 </div>

@@ -54,9 +54,8 @@ export function Navbar() {
                             font-size: ${style.font.size.small};
 
                             &:hover {
-                                background: ${style.color.onHoverColor};
-                                border: 1px solid
-                                    ${style.color.onHoverBorderColor};
+                                background: ${style.color.blue};
+                                border: 1px solid ${style.color.blueBorder};
                             }
                         }
                     }
