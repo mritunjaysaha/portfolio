@@ -82,6 +82,10 @@ export function ProjectCard({ name, description, repo, demo, stack }) {
                             border: 1px solid ${style.color.blueBorder};
                             border-radius: 0.5rem;
 
+                            &:first-child {
+                                margin-left: 0;
+                            }
+
                             &:last-child {
                                 margin-right: 0;
                             }
