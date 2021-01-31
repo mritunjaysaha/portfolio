@@ -16,7 +16,7 @@ export const projects = [
         repo: "https://github.com/mritunjaysaha/markdown-previewer",
         demo: "https://markdownpreviewer.xyz",
         stack: ["React.js", "Material-UI", "Sass"],
-        gif: "./gifs/markdown.gif",
+        gif: "markdown.gif",
     },
     {
         display: true,

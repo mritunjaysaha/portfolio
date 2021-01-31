@@ -2,7 +2,7 @@
 import { jsx, css } from "@emotion/core";
 import { ProjectCard } from "../components/projectCard";
 
-export function ProjectArticle({ name, description, repo, demo, stack }) {
+export function ProjectArticle({ name, description, repo, demo, stack, gif }) {
     return (
         <>
             <article
@@ -19,6 +19,7 @@ export function ProjectArticle({ name, description, repo, demo, stack }) {
                     repo={repo}
                     demo={demo}
                     stack={stack}
+                    gif={gif}
                 />
             </article>
         </>

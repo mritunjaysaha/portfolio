@@ -21,7 +21,15 @@ export function ProjectSection() {
                     Projects
                 </h1>
                 {projects.map(
-                    ({ display, name, description, repo, demo, stack }) => {
+                    ({
+                        display,
+                        name,
+                        description,
+                        repo,
+                        demo,
+                        stack,
+                        gif,
+                    }) => {
                         if (display) {
                             return (
                                 <ProjectArticle
@@ -30,6 +38,7 @@ export function ProjectSection() {
                                     repo={repo}
                                     demo={demo}
                                     stack={stack}
+                                    gif={gif}
                                 />
                             );
                         }

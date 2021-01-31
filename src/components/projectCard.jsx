@@ -4,19 +4,42 @@ import { Anchor } from "../atoms/anchor";
 import { style } from "../../styles/style";
 import Image from "next/image";
 
-export function ProjectCard({ name, description, repo, demo, stack }) {
-    const temp =
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque quae voluptates unde dolorum laboriosam, ea a praesentium sed quibusdam neque.";
+export function ProjectCard({ name, description, repo, demo, stack, gif }) {
     return (
         <>
             <div
                 css={css`
+                    background-color: #888;
                     grid-area: img;
-                    background: #999;
                     height: 20rem;
                     width: 30rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    aspect-ratio: 16/9;
                 `}
-            ></div>
+            >
+                {gif ? (
+                    // <img
+                    //     css={css`
+                    //         height: inherit;
+                    //         width: inherit;
+                    //         border-radius: 0.5rem;
+                    //         aspect-ratio: 16/9;
+                    //     `}
+                    //     src={r}
+                    //     alt={name}
+                    // />
+                    <Image
+                        src={`/${gif}`}
+                        alt={name}
+                        height={200}
+                        width={300}
+                    />
+                ) : (
+                    <p>Loading...</p>
+                )}
+            </div>
             <div
                 css={css`
                     grid-area: content;
@@ -52,12 +75,14 @@ export function ProjectCard({ name, description, repo, demo, stack }) {
                         css={css`
                             display: flex;
                             margin-left: 1rem;
+
                             p {
                                 background-color: ${style.color.blue};
                                 border: 1px solid ${style.color.blueBorder};
                                 padding: 1rem 2rem;
                                 margin: 0 1rem;
                                 border-radius: 0.5rem;
+                                cursor: pointer;
                             }
                         `}
                     >
