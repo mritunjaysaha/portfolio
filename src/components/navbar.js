@@ -11,6 +11,10 @@ export function Navbar() {
                 display: flex;
                 justify-content: space-between;
                 padding: 4rem 0;
+
+                @media only screen and (max-width: 767px) {
+                    display: none;
+                }
             `}
         >
             <div
@@ -50,12 +54,13 @@ export function Navbar() {
                             color: ${style.color.black};
                             transition: 0.3s all;
                             border-radius: 0.5rem;
-                            border: 1px solid transparent;
+                            border: ${style.border.thickness} solid transparent;
                             font-size: ${style.font.size.small};
 
                             &:hover {
                                 background: ${style.color.blue};
-                                border: 1px solid ${style.color.blueBorder};
+                                border: ${style.border.thickness} solid
+                                    ${style.border.color};
                             }
                         }
                     }

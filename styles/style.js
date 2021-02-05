@@ -4,7 +4,6 @@ export const style = {
         black: "#16161d",
         textColor: "hsl(225, 53%, 35%)",
         blue: "hsl(199.2, 77.4%, 89.9%)",
-        blueBorder: "hsl(199.2, 77.4%, 60.9%)",
     },
     font: {
         size: {
@@ -14,4 +13,14 @@ export const style = {
             bold: 700,
         },
     },
+    border: {
+        thickness: "2.5px",
+        color: "hsl(199.2, 77.4%, 60.9%)",
+    },
 };
+
+const breakPoints = [567, 768, 992, 1200];
+
+export const mediaQueries = breakPoints.map(
+    (bp) => `@media only screen and (max-width: ${bp}px)`
+);

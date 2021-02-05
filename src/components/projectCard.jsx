@@ -20,16 +20,6 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
                 `}
             >
                 {gif ? (
-                    // <img
-                    //     css={css`
-                    //         height: inherit;
-                    //         width: inherit;
-                    //         border-radius: 0.5rem;
-                    //         aspect-ratio: 16/9;
-                    //     `}
-                    //     src={r}
-                    //     alt={name}
-                    // />
                     <Image
                         src={`/${gif}`}
                         alt={name}
@@ -78,7 +68,8 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
 
                             p {
                                 background-color: ${style.color.blue};
-                                border: 1px solid ${style.color.blueBorder};
+                                border: ${style.border.thickness} solid
+                                    ${style.border.color};
                                 padding: 1rem 2rem;
                                 margin: 0 1rem;
                                 border-radius: 0.5rem;
@@ -104,7 +95,8 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
                             text-decoration: none;
                             margin: 0 1rem;
                             padding: 1rem 2rem;
-                            border: 1px solid ${style.color.blueBorder};
+                            border: ${style.border.thickness} solid
+                                ${style.border.color};
                             border-radius: 0.5rem;
 
                             &:first-child {

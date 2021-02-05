@@ -11,6 +11,12 @@ export function IntroSection() {
                 grid-column: 1 / span 12;
                 display: flex;
                 justify-content: space-between;
+
+                @media only screen and (max-width: 767px) {
+                    display: flex;
+
+                    /* flex-direction: column; */
+                }
             `}
         >
             <header>

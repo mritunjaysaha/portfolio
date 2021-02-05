@@ -3,14 +3,14 @@ import { css, jsx } from "@emotion/core";
 import {
     UilLinkedinAlt,
     UilGithubAlt,
-    UilTwitter,
+    UilTwitterAlt,
 } from "@iconscout/react-unicons";
 import { Anchor } from "../atoms/anchor";
-import { style } from "../../styles/style";
+import { style, mediaQueries } from "../../styles/style";
 
 const socialIcons = css`
-    height: 4rem;
-    width: 4rem;
+    height: 3.5rem;
+    width: 3.5rem;
     transition: border 0.3s;
     vertical-align: center;
     text-align: center;
@@ -24,6 +24,10 @@ const asideStyle = css`
     top: 0px;
     left: 0px;
     height: 100vh;
+
+    ${mediaQueries[0]} {
+        display: none;
+    }
 `;
 
 const ulStyle = css`
@@ -36,11 +40,11 @@ const ulStyle = css`
 const liStyle = css`
     margin: 1rem 1.5rem;
     border-radius: 50%;
-    border: 2.5px solid transparent;
+    border: ${style.border.thickness} solid transparent;
     padding: 1.2rem 1rem 0.5rem;
     transition: ease-in 0.3s;
     &:hover {
-        border: 2.5px solid ${style.color.blueBorder};
+        border: ${style.border.thickness} solid ${style.border.color};
     }
 `;
 
@@ -56,7 +60,7 @@ export function SocialTabs() {
                 </li>
                 <li css={liStyle}>
                     <Anchor
-                        content={<UilTwitter css={socialIcons} />}
+                        content={<UilTwitterAlt css={socialIcons} />}
                         link="https://github.com/mritunjaysaha"
                     />
                 </li>
