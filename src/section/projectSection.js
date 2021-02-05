@@ -2,14 +2,18 @@
 import { css, jsx } from "@emotion/core";
 import { projects } from "../data/projectInfo";
 import { ProjectArticle } from "../components/projectArticle";
+import { mediaQueries } from "../../styles/style";
 
 export function ProjectSection() {
     return (
         <>
             <section
                 css={css`
-                    grid-column: 1 / span 12;
-                    display: none;
+                    display: flex;
+                    flex-direction: column;
+                    ${mediaQueries[3]} {
+                        grid-column: 1 / span 12;
+                    }
                 `}
             >
                 <h1

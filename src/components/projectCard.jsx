@@ -1,7 +1,7 @@
 /**@jsx jsx*/
 import { css, jsx } from "@emotion/core";
 import { Anchor } from "../atoms/anchor";
-import { style } from "../../styles/style";
+import { style, mediaQueries } from "../../styles/style";
 import Image from "next/image";
 
 export function ProjectCard({ name, description, repo, demo, stack, gif }) {
@@ -9,22 +9,29 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
         <>
             <div
                 css={css`
-                    background-color: #888;
-                    grid-area: img;
-                    height: 20rem;
-                    width: 30rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    width: 100%;
+                    height: auto;
+
                     aspect-ratio: 16/9;
+                    ${mediaQueries[3]} {
+                        grid-area: img;
+                        height: 20rem;
+                        width: 30rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
                 `}
             >
                 {gif ? (
                     <Image
                         src={`/${gif}`}
                         alt={name}
-                        height={200}
-                        width={300}
+                        height={220}
+                        width={400}
+                        css={css`
+                            aspect-ratio: 16/9;
+                        `}
                     />
                 ) : (
                     <p>Loading...</p>
@@ -32,16 +39,19 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
             </div>
             <div
                 css={css`
-                    grid-area: content;
-                    padding-left: 4rem;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
+                    ${mediaQueries[3]} {
+                        grid-area: content;
+                        padding-left: 4rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
                 `}
             >
                 <h1
                     css={css`
-                        font-size: 2.5rem;
+                        font-size: 3rem;
+                        margin: 1rem 0;
                     `}
                 >
                     {name ? name : "Project Name"}
@@ -49,6 +59,7 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
                 <p
                     css={css`
                         margin: 1rem 0;
+                        line-height: 2.4rem;
                     `}
                 >
                     {description ? description : temp}
@@ -56,8 +67,7 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
                 <p
                     css={css`
                         display: flex;
-                        align-items: center;
-                        margin-bottom: 1.5rem;
+                        margin: 2rem 0;
                     `}
                 >
                     <strong>Stack:</strong>
@@ -65,27 +75,22 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
                         css={css`
                             display: flex;
                             margin-left: 1rem;
+                            flex-wrap: wrap;
 
                             p {
                                 background-color: ${style.color.blue};
                                 border: ${style.border.thickness} solid
                                     ${style.border.color};
                                 padding: 1rem 2rem;
-                                margin: 0 1rem;
+                                margin: 0 1rem 1rem;
                                 border-radius: 0.5rem;
                                 cursor: pointer;
                             }
                         `}
                     >
-                        {stack ? (
-                            stack.map((s) => <p>{s}</p>)
-                        ) : (
-                            <>
-                                <p>react</p>
-                                <p>react</p>
-                                <p>react</p>
-                            </>
-                        )}
+                        {stack.map((s) => (
+                            <p>{s}</p>
+                        ))}
                     </span>
                 </p>
                 <div

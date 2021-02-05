@@ -20,7 +20,7 @@ export function IntroSection() {
         >
             <header
                 css={css`
-                    padding: 10rem 0;
+                    padding: 8rem 0;
                 `}
             >
                 <h1
