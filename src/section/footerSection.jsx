@@ -8,6 +8,7 @@ export function FooterSection() {
             css={css`
                 padding: 4rem 0;
                 grid-column: 1 / span 12;
+                display: none;
             `}
         >
             <Footer />

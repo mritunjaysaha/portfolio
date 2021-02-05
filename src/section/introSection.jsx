@@ -1,29 +1,37 @@
 /**@jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { ImageSlider } from "../components/imageSlider";
-import { style } from "../../styles/style";
+import { mediaQueries, style } from "../../styles/style";
 
 export function IntroSection() {
     return (
         <section
             css={css`
-                padding: 20rem 0;
-                grid-column: 1 / span 12;
-                display: flex;
-                justify-content: space-between;
+                padding: 0;
+                margin: 0;
 
-                @media only screen and (max-width: 767px) {
+                ${mediaQueries[3]} {
+                    padding: 20rem 0;
+                    grid-column: 1 / span 12;
                     display: flex;
-
-                    /* flex-direction: column; */
+                    justify-content: space-between;
                 }
             `}
         >
-            <header>
+            <header
+                css={css`
+                    padding: 10rem 0;
+                `}
+            >
                 <h1
                     css={css`
-                        font-size: 5rem;
-                        padding-bottom: 4rem;
+                        font-size: 3rem;
+                        padding-bottom: 1rem;
+
+                        ${mediaQueries[3]} {
+                            font-size: 5rem;
+                            padding-bottom: 4rem;
+                        }
                     `}
                 >
                     Hey, I'm{" "}
@@ -38,7 +46,10 @@ export function IntroSection() {
                 </h1>
                 <p
                     css={css`
-                        font-size: 2.5rem;
+                        line-height: 2rem;
+                        ${mediaQueries[3]} {
+                            font-size: 2.5rem;
+                        }
                     `}
                 >
                     Aspiring Front-end developer

@@ -9,6 +9,7 @@ export function ProjectSection() {
             <section
                 css={css`
                     grid-column: 1 / span 12;
+                    display: none;
                 `}
             >
                 <h1

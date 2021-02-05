@@ -18,7 +18,8 @@ const socialIcons = css`
 
 const asideStyle = css`
     position: fixed;
-    display: flex;
+    /* display: flex; */
+    display: none;
     justify-content: center;
     align-items: center;
     top: 0px;

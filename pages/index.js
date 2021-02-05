@@ -7,7 +7,7 @@ import { SocialTabs } from "../src/components/socialTabs";
 import { ProjectSection } from "../src/section/projectSection";
 import { FooterSection } from "../src/section/footerSection";
 import { IntroSection } from "../src/section/introSection";
-import { mediaQueries } from "../styles/style";
+import { mediaQueries, style } from "../styles/style";
 
 export default function Home() {
     return (
@@ -16,11 +16,12 @@ export default function Home() {
                 // grid layout of entire page
                 css={css`
                     display: grid;
-                    grid-template-columns: repeat(12, minmax(0, 1fr));
-                    column-gap: 1rem;
-                    padding: 0 20rem;
+                    padding: 0 ${style.paddingSide.mobile};
 
-                    ${mediaQueries[0]} {
+                    ${mediaQueries[3]} {
+                        grid-template-columns: repeat(12, minmax(0, 1fr));
+                        column-gap: 1rem;
+                        padding: 0 20rem;
                     }
                 `}
             >

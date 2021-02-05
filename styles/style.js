@@ -17,10 +17,13 @@ export const style = {
         thickness: "2.5px",
         color: "hsl(199.2, 77.4%, 60.9%)",
     },
+    paddingSide: {
+        mobile: "2rem",
+    },
 };
 
 const breakPoints = [567, 768, 992, 1200];
 
 export const mediaQueries = breakPoints.map(
-    (bp) => `@media only screen and (max-width: ${bp}px)`
+    (bp) => `@media only screen and (min-width: ${bp}px)`
 );

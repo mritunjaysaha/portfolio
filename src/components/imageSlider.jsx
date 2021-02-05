@@ -35,6 +35,7 @@ export function ImageSlider() {
             css={css`
                 width: 60rem;
                 overflow-x: hidden;
+                display: none;
             `}
         >
             <ul

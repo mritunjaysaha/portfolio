@@ -1,19 +1,19 @@
 /**@jsx jsx */
 import { css, jsx } from "@emotion/core";
 import { Anchor } from "../atoms/anchor";
-import { style } from "../../styles/style";
+import { style, mediaQueries } from "../../styles/style";
 
 export function Navbar() {
     return (
         <nav
             css={css`
-                grid-column: 1 / span 12;
-                display: flex;
-                justify-content: space-between;
                 padding: 4rem 0;
 
-                @media only screen and (max-width: 767px) {
-                    display: none;
+                ${mediaQueries[3]} {
+                    grid-column: 1 / span 12;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 4rem 0;
                 }
             `}
         >
@@ -32,7 +32,8 @@ export function Navbar() {
             </div>
             <ul
                 css={css`
-                    display: flex;
+                    /* display: flex; */
+                    display: none;
                     justify-content: space-between;
 
                     li {
