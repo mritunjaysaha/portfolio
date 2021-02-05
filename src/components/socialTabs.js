@@ -1,20 +1,19 @@
 /**@jsx jsx */
 import { css, jsx } from "@emotion/core";
-import { UilLinkedin, UilGithub, UilTwitter } from "@iconscout/react-unicons";
+import {
+    UilLinkedinAlt,
+    UilGithubAlt,
+    UilTwitter,
+} from "@iconscout/react-unicons";
 import { Anchor } from "../atoms/anchor";
 import { style } from "../../styles/style";
 
 const socialIcons = css`
-    height: 3rem;
-    width: 3rem;
-    padding: 1rem;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    transition: border 0.8s;
-
-    &:hover {
-        border: 2px solid ${style.color.blueBorder};
-    }
+    height: 4rem;
+    width: 4rem;
+    transition: border 0.3s;
+    vertical-align: center;
+    text-align: center;
 `;
 
 const asideStyle = css`
@@ -25,18 +24,23 @@ const asideStyle = css`
     top: 0px;
     left: 0px;
     height: 100vh;
-    padding: 0 2rem;
-    & > ul {
-        list-style-type: none;
-    }
 `;
 
 const ulStyle = css`
+    list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    & > li {
-        margin: 1rem 0;
+`;
+
+const liStyle = css`
+    margin: 1rem 1.5rem;
+    border-radius: 50%;
+    border: 2.5px solid transparent;
+    padding: 1.2rem 1rem 0.5rem;
+    transition: ease-in 0.3s;
+    &:hover {
+        border: 2.5px solid ${style.color.blueBorder};
     }
 `;
 
@@ -44,30 +48,30 @@ export function SocialTabs() {
     return (
         <aside css={asideStyle}>
             <ul css={ulStyle}>
-                <li>
+                <li css={liStyle}>
                     <Anchor
-                        content={<UilGithub css={socialIcons} />}
+                        content={<UilGithubAlt css={socialIcons} />}
                         link="https://github.com/mritunjaysaha"
                     />
                 </li>
-                <li>
+                <li css={liStyle}>
                     <Anchor
                         content={<UilTwitter css={socialIcons} />}
                         link="https://github.com/mritunjaysaha"
                     />
                 </li>
-                <li>
+                <li css={liStyle}>
                     <Anchor
-                        content={<UilLinkedin css={socialIcons} />}
+                        content={<UilLinkedinAlt css={socialIcons} />}
                         link="https://github.com/mritunjaysaha"
                     />
                 </li>
-                <li>
+                <li css={liStyle}>
                     <Anchor
                         content={
                             <img
                                 src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
-                                alt="Mritunjay Saha's DEV Profile"
+                                alt="DEV Profile"
                                 css={socialIcons}
                             />
                         }
