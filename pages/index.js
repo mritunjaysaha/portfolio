@@ -2,7 +2,7 @@
 import { css, jsx } from "@emotion/core";
 
 import React from "react";
-import { Navbar } from "../src/components/navbar";
+import { Navbar } from "../src/components/navbar.jsx";
 import { SocialTabs } from "../src/components/socialTabs";
 import { ProjectSection } from "../src/section/projectSection";
 import { FooterSection } from "../src/section/footerSection";
@@ -26,11 +26,11 @@ export default function Home() {
                 `}
             >
                 <Navbar />
-                <IntroSection />
+                {/* <IntroSection />
                 <ProjectSection />
-                <FooterSection />
+                <FooterSection /> */}
             </section>
-            <SocialTabs />
+            {/* <SocialTabs /> */}
         </>
     );
 }

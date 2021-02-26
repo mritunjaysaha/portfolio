@@ -8,6 +8,7 @@ export const style = {
     font: {
         size: {
             small: "1.8rem",
+            medium: "2.4rem",
         },
         weight: {
             bold: 700,
