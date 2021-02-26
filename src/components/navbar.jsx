@@ -3,12 +3,22 @@ import { css, jsx } from "@emotion/core";
 import { Anchor } from "../atoms/anchor";
 import { style, mediaQueries } from "../../styles/style";
 import { SocialTabs } from "./socialTabs";
+import { useState } from "react";
 
 export function Navbar() {
+    const [isMenuClicked, setMenuClicked] = useState(false);
+
+    function handleMenuClick() {
+        console.log("clicked");
+        setMenuClicked(true);
+    }
+
     return (
         <nav
             css={css`
                 padding: 4rem 0;
+                display: flex;
+                justify-content: space-between;
 
                 /* Desktop view */
                 ${mediaQueries[3]} {
@@ -32,15 +42,39 @@ export function Navbar() {
                     fontWeight={style.font.weight.bold}
                 />
             </div>
+
+            {/* Hamburger Menu */}
+            <section
+                css={css`
+                    height: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    div {
+                        background: ${style.color.black};
+                        height: 0.4rem;
+                        width: 3.2rem;
+
+                        border-radius: 15px;
+                    }
+                `}
+                onClick={handleMenuClick}
+            >
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+
             <ul
                 css={css`
                     position: absolute;
                     top: 0;
                     left: 0;
 
-                    background: rgba(0, 0, 0, 0.9);
+                    background: ${style.color.black};
 
-                    display: flex;
+                    display: ${isMenuClicked ? "flex" : "none"};
                     flex-direction: column;
 
                     height: 100vh;
@@ -72,10 +106,10 @@ export function Navbar() {
 
                             background-image: linear-gradient(
                                 to left,
-                                white,
-                                white
+                                ${style.color.white},
+                                ${style.color.white}
                             );
-                            background-size: 42% ${style.border.thickness};
+                            background-size: 36% ${style.border.thickness};
                             background-repeat: no-repeat;
                             background-position: left bottom;
                         }
