@@ -8,9 +8,14 @@ import { useState } from "react";
 export function Navbar() {
     const [isMenuClicked, setMenuClicked] = useState(false);
 
-    function handleMenuClick() {
+    function handleMenuBtn() {
         console.log("clicked");
         setMenuClicked(true);
+    }
+
+    function handleCloseBtn() {
+        console.log("close");
+        setMenuClicked(false);
     }
 
     return (
@@ -59,7 +64,7 @@ export function Navbar() {
                         border-radius: 15px;
                     }
                 `}
-                onClick={handleMenuClick}
+                onClick={handleMenuBtn}
             >
                 <div></div>
                 <div></div>
@@ -150,6 +155,24 @@ export function Navbar() {
                     }
                 `}
             >
+                <li>
+                    <p
+                        css={css`
+                            position: absolute;
+                            top: 4rem;
+                            right: 4rem;
+
+                            display: ${isMenuClicked ? "flex" : "none"};
+
+                            color: ${style.color.white};
+                            font-size: 4rem;
+                            font-weight: ${style.font.weight.bold};
+                        `}
+                        onClick={handleCloseBtn}
+                    >
+                        &times;
+                    </p>
+                </li>
                 <li>
                     <Anchor content="Projects" link="/projects" />
                 </li>
