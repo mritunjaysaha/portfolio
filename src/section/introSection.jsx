@@ -10,6 +10,8 @@ export function IntroSection() {
                 padding: 0;
                 margin: 0;
 
+                z-index: 0;
+
                 ${mediaQueries[3]} {
                     padding: 20rem 0;
                     grid-column: 1 / span 12;
