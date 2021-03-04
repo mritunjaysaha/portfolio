@@ -86,7 +86,7 @@ export function Navbar() {
                     height: 100vh;
                     width: 100vw;
 
-                    transform: translateX(50%);
+                    /* transform: translateX(50%); */
                     /* opacity: 0; */
 
                     z-index: 100;
