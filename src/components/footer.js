@@ -1,14 +1,19 @@
 /**@jsx jsx */
 import { css, jsx } from "@emotion/core";
 import { UilEnvelopeAlt } from "@iconscout/react-unicons";
+import { mediaQueries } from "../../styles/style";
 
 export function Footer() {
     return (
         <footer
             css={css`
-                grid-column: 1 / span 12;
                 display: flex;
-                justify-content: space-between;
+                text-align: center;
+                justify-content: center;
+
+                ${mediaQueries[3]} {
+                    grid-column: 1 / span 12;
+                }
             `}
         >
             <p
@@ -25,7 +30,6 @@ export function Footer() {
                 </span>
                 mritunjaysaha@outlook.com
             </p>
-            <p>Connect with me</p>
         </footer>
     );
 }
