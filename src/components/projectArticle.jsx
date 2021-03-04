@@ -2,7 +2,7 @@
 import { jsx, css } from "@emotion/core";
 import { ProjectCard } from "../components/projectCard";
 import { mediaQueries } from "../../styles/style";
-export function ProjectArticle({ name, description, repo, demo, stack, gif }) {
+export function ProjectArticle(props) {
     return (
         <>
             <article
@@ -18,14 +18,7 @@ export function ProjectArticle({ name, description, repo, demo, stack, gif }) {
                     }
                 `}
             >
-                <ProjectCard
-                    name={name}
-                    description={description}
-                    repo={repo}
-                    demo={demo}
-                    stack={stack}
-                    gif={gif}
-                />
+                <ProjectCard {...props} />
             </article>
         </>
     );

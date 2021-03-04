@@ -9,6 +9,7 @@ export const style = {
         size: {
             small: "1.8rem",
             medium: "2.4rem",
+            large: "3rem",
         },
         weight: {
             bold: 700,

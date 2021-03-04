@@ -7,6 +7,7 @@ import Image from "next/image";
 export function ProjectCard({ name, description, repo, demo, stack, gif }) {
     return (
         <>
+            {/* gif */}
             <div
                 css={css`
                     width: 100%;
@@ -37,6 +38,8 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
                     <p>Loading...</p>
                 )}
             </div>
+
+            {/* Description */}
             <div
                 css={css`
                     ${mediaQueries[3]} {
@@ -64,6 +67,8 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
                 >
                     {description ? description : temp}
                 </p>
+
+                {/* Stack */}
                 <p
                     css={css`
                         display: flex;
@@ -81,10 +86,17 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
                                 background-color: ${style.color.blue};
                                 border: ${style.border.thickness} solid
                                     ${style.border.color};
-                                padding: 1rem 2rem;
-                                margin: 0 1rem 1rem;
                                 border-radius: 0.5rem;
-                                cursor: pointer;
+                                font-size: ${style.font.size.small};
+
+                                padding: 0.6rem 1.4rem;
+                                margin: 0 0.4rem 0.4rem;
+
+                                ${mediaQueries[3]} {
+                                    padding: 1rem 2rem;
+                                    margin: 0 1rem 1rem;
+                                    cursor: pointer;
+                                }
                             }
                         `}
                     >
@@ -93,6 +105,7 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
                         ))}
                     </span>
                 </p>
+
                 <div
                     css={css`
                         display: flex;
@@ -103,6 +116,11 @@ export function ProjectCard({ name, description, repo, demo, stack, gif }) {
                             border: ${style.border.thickness} solid
                                 ${style.border.color};
                             border-radius: 0.5rem;
+
+                            font-size: ${style.font.size.small};
+
+                            padding: 0.6rem 1.4rem;
+                            margin: 0 0.4rem 0.4rem;
 
                             &:first-child {
                                 margin-left: 0;

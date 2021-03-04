@@ -77,8 +77,7 @@ export function Navbar() {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    background: red;
-                    /* background: ${style.color.black}; */
+                    background: ${style.color.black};
 
                     display: ${isMenuClicked ? "flex" : "none"};
                     flex-direction: column;
@@ -86,10 +85,7 @@ export function Navbar() {
                     height: 100vh;
                     width: 100vw;
 
-                    /* transform: translateX(50%); */
-                    /* opacity: 0; */
-
-                    z-index: 100;
+                    z-index: 10;
 
                     li {
                         list-style: none;

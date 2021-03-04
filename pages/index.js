@@ -27,8 +27,8 @@ export default function Home() {
             >
                 <Navbar />
                 <IntroSection />
-                {/* <ProjectSection />
-                <FooterSection /> */}
+                <ProjectSection />
+                {/* <FooterSection /> */}
             </section>
             {/* <SocialTabs /> */}
         </>
