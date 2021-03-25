@@ -17,17 +17,14 @@ const socialIcons = css`
 `;
 
 const asideStyle = css`
-    position: fixed;
-    /* display: flex; */
-    display: none;
-    justify-content: center;
-    align-items: center;
-    top: 0px;
-    left: 0px;
-    height: 100vh;
-
-    ${mediaQueries[0]} {
-        display: none;
+    ${mediaQueries[3]} {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0px;
+        left: 0px;
+        height: 100vh;
     }
 `;
 

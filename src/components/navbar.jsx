@@ -56,6 +56,10 @@ export function Navbar() {
                     flex-direction: column;
                     justify-content: space-between;
 
+                    ${mediaQueries[3]} {
+                        display: none;
+                    }
+
                     div {
                         background: ${style.color.black};
                         height: 0.4rem;
@@ -118,13 +122,21 @@ export function Navbar() {
                         }
                     }
                     ${mediaQueries[3]} {
+                        position: unset;
+                        height: max-content;
+                        width: max-content;
+
+                        background: none;
+
                         display: flex;
+                        flex-direction: row;
                         justify-content: space-between;
+                        align-items: center;
 
                         li {
                             transition: 0.3s all;
                             padding: 0;
-                            margin: 0 2.5rem;
+                            margin: 1rem 2.5rem;
 
                             &:first-child {
                                 margin-left: 0;
@@ -135,25 +147,35 @@ export function Navbar() {
                             }
 
                             a {
+                                background: none;
                                 padding: 1rem 2.5rem;
                                 color: ${style.color.black};
                                 transition: 0.3s all;
                                 border-radius: 0.5rem;
-                                border: ${style.border.thickness} solid
-                                    transparent;
+                                /* border: ${style.border.thickness} solid
+                                    transparent; */
                                 font-size: ${style.font.size.small};
+                                letter-spacing: unset;
+                                text-transform: capitalize;
 
                                 &:hover {
                                     background: ${style.color.blue};
-                                    border: ${style.border.thickness} solid
-                                        ${style.border.color};
+                                    /* border: ${style.border.thickness} solid
+                                        ${style.border.color}; */
                                 }
                             }
                         }
                     }
                 `}
             >
-                <li>
+                <li
+                    css={css`
+                        ${mediaQueries[3]} {
+                            display: none;
+                        }
+                    `}
+                >
+                    {/* close button */}
                     <p
                         css={css`
                             position: absolute;

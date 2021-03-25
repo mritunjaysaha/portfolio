@@ -30,7 +30,7 @@ export default function Home() {
                 <ProjectSection />
                 <FooterSection />
             </section>
-            {/* <SocialTabs /> */}
+            <SocialTabs />
         </>
     );
 }
